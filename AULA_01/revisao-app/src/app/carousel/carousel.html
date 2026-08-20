@@ -1,0 +1,37 @@
+<section class="carousel">
+  <button
+    class="carousel-button"
+    type="button"
+    aria-label="Slide anterior"
+    (click)="previousSlide()"
+  >
+    &lt;
+  </button>
+
+  <div class="slide">
+    <p class="slide-count">Slide {{ currentSlide() + 1 }} de {{ slides.length }}</p>
+    <h2>{{ activeSlide().title }}</h2>
+    <p>{{ activeSlide().description }}</p>
+  </div>
+
+  <button
+    class="carousel-button"
+    type="button"
+    aria-label="Proximo slide"
+    (click)="nextSlide()"
+  >
+    &gt;
+  </button>
+
+  <div class="indicators" aria-label="Escolher slide">
+    @for (slide of slides; track slide.title; let index = $index) {
+      <button
+        class="indicator"
+        type="button"
+        [class.active]="index === currentSlide()"
+        [attr.aria-label]="'Ir para o slide ' + (index + 1)"
+        (click)="goToSlide(index)"
+      ></button>
+    }
+  </div>
+</section>

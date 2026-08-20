@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 33vh 1fr auto;
+  background-color: #f5f5f5;
+}
+
+.carousel-area {
+  height: 33vh;
+}
+
+.carousel-area app-carousel {
+  display: block;
+  height: 100%;
+}
+
+.cards-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 32px;
+}
+
+.cards-area app-card {
+  flex: 0 1 260px;
+}
+
+@media (max-width: 800px) {
+  .cards-area {
+    flex-direction: column;
+  }
+
+  .cards-area app-card {
+    width: 100%;
+    max-width: 320px;
+  }
+}

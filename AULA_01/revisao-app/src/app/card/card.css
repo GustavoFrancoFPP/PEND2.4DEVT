@@ -1,0 +1,11 @@
+.card {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: darkorchid;
+  color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 18px rgb(0 0 0 / 14%);
+}
